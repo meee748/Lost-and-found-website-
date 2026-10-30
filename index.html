@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusFind</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a class="brand" href="index.html" aria-label="CampusFind home">
+            <span class="brand-mark" aria-hidden="true">CF</span>
+            <span>CampusFind</span>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#search">Search</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <section id="home" class="hero">
+
+        
+        <span class="hero-label">Your campus lost &amp; found corner</span>
+        <h2>Lost something? Found something?</h2>
+
+        <p>
+            CampusFind helps students report, search,
+            match and recover lost belongings.
+        </p>
+
+        <form class="campus-picker" id="campusPicker" onsubmit="saveUniversity(event)">
+            <label for="universityName">Your university</label>
+            <div class="campus-picker-row">
+                <input type="text" id="universityName" list="universitySuggestions"
+                    placeholder="e.g. Lovely Professional University" autocomplete="organization">
+                <button type="submit">Set campus</button>
+            </div>
+            <datalist id="universitySuggestions">
+                <option value="Lovely Professional University"></option>
+                <option value="Delhi University"></option>
+                <option value="Amity University"></option>
+            </datalist>
+            <p class="campus-picker-note">Support details will be tailored to <strong data-university-name>Lovely Professional University</strong>.</p>
+        </form>
+
+        <button onclick="window.location.href='lost.html'">
+            Report Lost Item
+        </button>
+
+        <button onclick="window.location.href='found.html'">
+            Report Found Item
+        </button>
+
+
+    </section>
+
+    <section class="how-it-works" aria-labelledby="how-title">
+        <div class="section-heading centered-heading">
+        
+            <h2 id="how-title">A little help goes a long way</h2>
+            <p>Three small steps can reconnect someone with what they lost.</p>
+        </div>
+
+        <div class="steps-grid">
+            <article class="step-card">
+                <span class="step-number">01.</span>
+                <h3>Tell us about it</h3>
+                <p>Add the item, place, and a few details.</p>
+            </article>
+            <article class="step-card">
+                <span class="step-number">02.</span>
+                <h3>Look for a match</h3>
+                <p>Search recent reports from around campus.</p>
+            </article>
+            <article class="step-card">
+                <span class="step-number">03.</span>
+                <h3>Bring it home</h3>
+                <p>Connect thoughtfully and verify before sharing.</p>
+            </article>
+        </div>
+    </section>
+
+
+    <section id="search">
+
+        <div class="section-heading">
+            <h2>Search Items</h2>
+            <p>Browse recent finds and see if something looks familiar.</p>
+        </div>
+
+        <div class="search-bar">
+            <input type="search" id="searchInput" placeholder="Search item, location, or keyword" aria-label="Search lost and found items">
+
+            <button onclick="searchItem()">
+                Search items
+            </button>
+        </div>
+
+        <p class="search-hint">Try searching for “library”, “blue”, or an item name.</p>
+
+        <div id="results" aria-live="polite">
+            <p class="empty-state">Search above to browse recent found items.</p>
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>CampusFind | Campus Life & Student Experience</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | CampusFind</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a class="brand" href="index.html" aria-label="CampusFind home">
+            <span class="brand-mark" aria-hidden="true">CF</span>
+            <span>CampusFind</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="lost.html">Report Lost</a>
+            <a href="found.html">Report Found</a>
+            <a href="index.html#search">Search</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="info-page contact-page">
+            <div class="section-heading">
+                <span class="section-kicker">We are here to help</span>
+                <h2>Contact CampusFind</h2>
+                <p>Have a question, correction, or safety concern? Reach out to the campus support team.</p>
+            </div>
+
+            <form class="campus-picker contact-picker" id="contactCampusPicker" onsubmit="saveUniversity(event)">
+                <label for="contactUniversityName">Set your university</label>
+                <div class="campus-picker-row">
+                    <input type="text" id="contactUniversityName" list="contactUniversitySuggestions"
+                        placeholder="e.g. Lovely Professional University" autocomplete="organization">
+                    <button type="submit">Update desk</button>
+                </div>
+                <datalist id="contactUniversitySuggestions">
+                    <option value="Lovely Professional University"></option>
+                    <option value="Delhi University"></option>
+                    <option value="Amity University"></option>
+                </datalist>
+            </form>
+
+            <div class="contact-layout">
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:campusfind@gmail.com">campusfind@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone</span>
+                        <a href="tel:+15550142026">+1 222-555-0142</a>
+                        <p>Monday-Friday, 9:00 AM-4:00 PM</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Student support desk · <span data-university-name>Lovely Professional University</span></span>
+                        <p>Student Center, Ground Floor<br>Monday-Friday, 9:00 AM-4:00 PM</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Safety concern?</span>
+                        <p>Contact campus security directly for urgent matters.</p>
+                    </div>
+                </div>
+
+                <div class="notice-box">
+                    <strong>Before you write</strong>
+                    <p>Include the report type, item name, and a short explanation. Please do not send passwords, payment details, or student identification numbers.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CampusFind | Campus Life &amp; Student Experience</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
